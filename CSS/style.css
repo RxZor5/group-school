@@ -1,54 +1,129 @@
-*{
-    margin: 0;
-    padding: 0;
+* {
+   margin: 0;
+   padding: 0;
 }
 
-/* .parent {
-    display: grid;
-    height: 100%;
-    width: 100%;
-    grid-template-columns: 25% 50% 25%;
-    grid-template-rows: 100px 400px 100px;
-    grid-column-gap: 0px;
-    grid-row-gap: 0px;
-} */
 
 .angry-grid {
-    display: grid; 
- 
-    grid-template-rows: 10vh repeat(4, 20vh) 10vh;
-    grid-template-columns: 20vw 20vw 20vw 20vw 20vw;
-    
-    gap: 0px;
-    height: 100%;
-    
- }
-  
- .angry-grid > div{
-    border: blue 1px solid;
- }
+   display: grid;
 
-  .div-1{
-    grid-area: 1/1/1/6;
+   grid-template-rows: 10vh repeat(4, 20vh) 10vh;
+   grid-template-columns: 20vw 20vw 20vw 20vw 20vw;
 
-    background-color: coral;
- }
+   gap: 0px;
+   height: 100%;
 
- .div-2{
-    grid-area: 2/1/7/1;
+}
 
-    background-color: blue;
- }
+.angry-grid>div {
+   border: blue 1px solid;
+}
 
- .div-3{
-    grid-area:6/2/6/6 ;
+.div-1 {
+   grid-area: 1/1/1/6;
 
-    background-color: green;
- }
+   background-color: coral;
+}
 
- .div-4{
-    grid-area:2/2/6/6 ;
+.div-2 {
+   grid-area: 2/1/7/1;
 
-    background-color: red;
- }
+   background-color: blue;
+}
 
+.div-3 {
+   grid-area: 6/2/6/6;
+
+   background-color: green;
+}
+
+.div-4 {
+   grid-area: 2/2/6/6;
+   background-color: red;
+
+   display: grid;
+   grid-template-columns: 1fr 1fr 1fr 1fr;
+   grid-template-rows: 1fr 1fr 1fr;
+}
+
+.div-4>.div-5 {
+   background-color: white;
+   grid-area: 1/1/1/5;
+   z-index: -1;
+}
+
+.div-4>.div-6 {
+   background-color: rgba(255, 255, 255, 0.49);
+   height: 1fr;
+}
+
+.div-6:hover {
+   animation: height-adjust-4-6 2s;
+   z-index: 5;
+}
+
+.div-4>.div-7 {
+   background-color: rgb(34, 182, 165);
+}
+
+
+.div-4>.div-7:hover {
+   animation: height-adjust-4-7 2s;
+}
+
+.div-4>.div-8 {
+   background-color: blue;
+}
+
+.div-4>.div-8:hover {
+  animation: height-adjust-4-8 2s;
+}
+
+.div-4>.div-9 {
+   background-color: purple;
+}
+
+.div-4>.div-9:hover {
+  animation: height-adjust-4-9 2s;
+}
+
+
+@keyframes height-adjust-4-6 {
+   from {
+      grid-area: 2/1/3/1;
+   }
+
+   to {
+      grid-area: 1/1/3/2;
+   }
+}
+
+@keyframes height-adjust-4-7 {
+   from {
+      grid-area: 2 / 2 / 3 / 3;
+   }
+
+   to {
+      grid-area: 2 / 2 / 4 / 3;
+   }
+}
+
+@keyframes height-adjust-4-8 {
+   from {
+      grid-area: 2 / 3 / 3 / 4;
+   }
+
+   to {
+      grid-area: 1 / 3 / 3 / 4;
+   }
+}
+
+@keyframes height-adjust-4-9 {
+   from {
+      grid-area: 2 / 4 / 3 / 5;
+   }
+
+   to {
+      grid-area: 2 / 4 / 4 / 5;
+   }
+}
