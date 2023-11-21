@@ -58,7 +58,7 @@
 }
 
 .div-6:hover {
-   animation: height-adjust-4-6 2s;
+   animation: height-adjust-4-6 1s ;
    z-index: 5;
 }
 
@@ -68,7 +68,7 @@
 
 
 .div-4>.div-7:hover {
-   animation: height-adjust-4-7 2s;
+   animation: height-adjust-4-7 1s;
 }
 
 .div-4>.div-8 {
@@ -76,7 +76,7 @@
 }
 
 .div-4>.div-8:hover {
-  animation: height-adjust-4-8 2s;
+   animation: height-adjust-4-8 1s;
 }
 
 .div-4>.div-9 {
@@ -84,7 +84,7 @@
 }
 
 .div-4>.div-9:hover {
-  animation: height-adjust-4-9 2s;
+   animation: height-adjust-4-9 1s;
 }
 
 
