@@ -99,6 +99,5 @@
 
 .div-4>div>a>img {
    display: block;
-   margin-left: auto;
-   margin-right: auto;
+margin: auto;
 }
