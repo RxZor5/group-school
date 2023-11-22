@@ -55,20 +55,25 @@
 .div-4>.div-6 {
    background-color: rgba(255, 255, 255, 0.49);
    height: 1fr;
+   transition: grid-area ease-out 1s;
 }
 
 .div-6:hover {
-   animation: height-adjust-4-6 1s ;
-   z-index: 5;
+   grid-area: 1/1/3/2;
+
 }
 
 .div-4>.div-7 {
    background-color: rgb(34, 182, 165);
+   grid-area: 2 / 2 / 3 / 3;
+   transition: grid-area ease-out 1s;
+
 }
 
 
 .div-4>.div-7:hover {
-   animation: height-adjust-4-7 1s;
+   grid-area: 2 / 2 / 4 / 3;
+
 }
 
 .div-4>.div-8 {
@@ -76,54 +81,20 @@
 }
 
 .div-4>.div-8:hover {
-   animation: height-adjust-4-8 1s;
+   grid-area: 1 / 3 / 3 / 4;
+
 }
 
 .div-4>.div-9 {
    background-color: purple;
+   grid-area: 2 / 4 / 3 / 5;
+   transition: grid-area ease-out 1s;
+
+
 }
 
 .div-4>.div-9:hover {
-   animation: height-adjust-4-9 1s;
+   grid-area: 2 / 4 / 4 / 5;
 }
 
 
-@keyframes height-adjust-4-6 {
-   from {
-      grid-area: 2/1/3/1;
-   }
-
-   to {
-      grid-area: 1/1/3/2;
-   }
-}
-
-@keyframes height-adjust-4-7 {
-   from {
-      grid-area: 2 / 2 / 3 / 3;
-   }
-
-   to {
-      grid-area: 2 / 2 / 4 / 3;
-   }
-}
-
-@keyframes height-adjust-4-8 {
-   from {
-      grid-area: 2 / 3 / 3 / 4;
-   }
-
-   to {
-      grid-area: 1 / 3 / 3 / 4;
-   }
-}
-
-@keyframes height-adjust-4-9 {
-   from {
-      grid-area: 2 / 4 / 3 / 5;
-   }
-
-   to {
-      grid-area: 2 / 4 / 4 / 5;
-   }
-}
