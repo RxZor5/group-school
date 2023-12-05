@@ -97,13 +97,72 @@
    grid-area: 2 / 4 / 2 / 4;
    transition: grid-area ease-out 1s;
    border-radius: 10px;
+   text-decoration: none;
+}
 
-
+#TCM-content{
+   display: none;
 
 }
 
+a{
+   text-decoration: none;
+}
+
+ #GTA-content{
+   display: none;
+}
+
+.div-6:hover{
+   grid-area: 1/1/3/2;
+} 
+
+.div-6:hover #GTA-content{
+   line-height: 100%;
+   font-size: 115%;
+   padding-left: 20px;
+   color: aliceblue;
+   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+   display:block;
+}
+
+.div-6:hover{
+   grid-area: 1/1/3/2;
+} 
+#Ark-content{
+   display: none;
+}
+
+.div-7:hover #Ark-content{
+   display: block;
+   color: black;
+   padding-left:20px ;
+   font-family: 'Franklin Gothic Medium', 'Arial Narrow', 'Arial', 'sans-serif';
+   line-height: 100%;
+   font-size: 115%;
+}
+
+
+.div-6:hover #GTA-content{
+   line-height: 100%;
+   font-size: 115%;
+   padding-left: 20px;
+   color: aliceblue;
+   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+   display:inline-block;
+}
+
 .div-4>.div-9:hover {
-   grid-area: 1 / 4 / 4 / 5;
+   grid-area: 2 / 4 / 4 / 5;
+}
+
+.div-9:hover #TCM-content{
+   display: block;
+   color: black;
+   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+   padding-left: 20px;
+   line-height: 100%;
+   font-size: 115%;
 }
 
 .div-4>div>a>img {
