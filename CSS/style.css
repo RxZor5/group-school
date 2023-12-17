@@ -4,9 +4,11 @@
 }
 
 
-.angry-grid {
-   display: grid;
+.parent {
 
+   /* Grid erstellung */
+   
+   display: grid;
    grid-template-rows: 7vh repeat(2, 43vh) 7vh;
    grid-template-columns: repeat(3, 33.3vh);
    gap: 0px;
@@ -14,29 +16,40 @@
 
 }
 
-.angry-grid>div {
-   border: blue 1px solid;
-}
+
+
+/* Div 1 bearbeitung */
 
 .div-1 {
-   grid-area: 1/1/1/6;
+   /* Grid Orientierung + Farbverlauf*/
 
-   background-color: coral;
+   grid-area: 1/1/1/6;
+   background-image:linear-gradient(to right, green, grey, black, orange) ; 
 }
+
+h1{
+   /* Schriftart + Textorientierung+ Schriftfarbe */
+
+   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+   text-align: center;
+   color: rgb(205, 198, 198);
+}
+
+/* Div 2 Bearbeitung */
 
 .div-2 {
-   grid-area: 2/1/5/1;
+   /* Grid Orientierung + Farbverlauf*/
 
-   background-color: blue;
+   grid-area: 2/1/5/1;
+   background-image: linear-gradient(to top, purple, rgb(83, 0, 199));
 }
+
+/* Div 3 Bearbeitung */
+
 
 .div-3 {
-   grid-area: 6/2/4/6;
+   /*Grid Orientierung + Hintergrund Bild + anpassung + Untergeordnetes Grid erstellt */
 
-   background-color: green;
-}
-
-.div-4 {
    grid-area: 2/2/5/6;
    background-image: url("../img/background.jpeg");
    background-size: cover;
@@ -48,80 +61,39 @@
 }
 
 
-.div-4>.div-5 {
+.div-3>.div-5 {
+   /* Hintergrund + Grid orientierung + Z-index */
    background-color: white;
    grid-area: 1/1/1/5;
    z-index: -1;
 }
 
-.div-4>.div-6 {
+/* GTA */
+
+.div-3>.GTA {
+   /* Hintergrund +Transition + Abrundung */
+
    background-color: rgb(2, 95, 2);
-   height: 1fr;
    transition: grid-area ease-out 1s;
    border-radius: 10px;
 }
 
-.div-6:hover {
+#GTA-content{
+   /* Kein Inhalt anzeigen */
+
+   display: none;
+}
+
+.GTA:hover {
+   /* Grid Orientierung bei Hover*/
+
    grid-area: 1/1/3/2;
 
 }
 
-.div-4>.div-7 {
-   background-color: grey;
-   grid-area: 2 / 2 / 3 / 3;
-   transition: grid-area ease-out 1s;
-   border-radius: 10px;
+.GTA:hover #GTA-content{
+   /* Inhalt anzeigen bei Hover + Anpassung von Inhalt */
 
-
-}
-
-
-.div-4>.div-7:hover {
-   grid-area: 2 / 2 / 4 / 3;
-
-}
-
-.div-4>.div-8 {
-   background-color: black;
-   border-radius: 10px;
-
-}
-
-.div-4>.div-8:hover {
-   grid-area: 1 / 3 / 3 / 4;
-
-}
-
-.div-4>.div-9 {
-   background-color: orange;
-   grid-area: 2 / 4 / 2 / 4;
-   transition: grid-area ease-out 1s;
-   border-radius: 10px;
-   text-decoration: none;
-}
-
-#TCM-content{
-   display: none;
-
-}
-
-#TSP-content{
-   display: none;
-}
-
-a{
-   text-decoration: none;
-}
-
- #GTA-content{
-   display: none;
-}
-
-.div-6:hover{
-   grid-area: 1/1/3/2;
-} 
-
-.div-6:hover #GTA-content{
    line-height: 100%;
    font-size: 110%;
    padding-left: 20px;
@@ -130,14 +102,31 @@ a{
    display:block;
 }
 
-.div-6:hover{
-   grid-area: 1/1/3/2;
-} 
+/* Ark */
+
+
+.div-3>.Ark {
+   /* Hintergrund + Grid Orientierung +Transition + Abrundung */
+   background-color: grey;
+   grid-area: 2 / 2 / 3 / 3;
+   transition: grid-area ease-out 1s;
+   border-radius: 10px;
+
+}
+
 #Ark-content{
+   /* Kein Inhalt anzeigen */
    display: none;
 }
 
-.div-7:hover #Ark-content{
+.div-3>.Ark:hover {
+   /* Grid Orientierung bei Hover*/
+   grid-area: 2 / 2 / 4 / 3;
+
+}
+
+.Ark:hover #Ark-content{
+   /* Inhalt anzeigen bei Hover + Anpassung von Inhalt */
    display: block;
    color: black;
    padding-left:20px ;
@@ -146,8 +135,34 @@ a{
    font-size: 110%;
 }
 
+/* TSP */
 
-.div-6:hover #GTA-content{
+.div-3>.TSP {
+   /* Hintergrund + Transition + Abrundung */
+
+   background-color: black;
+   border-radius: 10px;
+   transition: grid-area ease-out 1s;
+   border-radius: 10px;
+   text-decoration: none;
+
+}
+
+#TSP-content{
+   /* Kein Inhalt anzeigen */
+   display: none;
+}
+
+.div-3>.TSP:hover {
+   /* Grid Orientierung bei Hover*/
+
+   grid-area: 1 / 3 / 3 / 4;
+
+}
+
+.TSP:hover #TSP-content{
+   /* Inhalt anzeigen bei Hover + Anpassung von Inhalt */
+
    line-height: 100%;
    font-size: 110%;
    padding-left: 20px;
@@ -156,20 +171,32 @@ a{
    display:inline-block;
 }
 
-.div-8:hover #TSP-content{
-   line-height: 100%;
-   font-size: 110%;
-   padding-left: 20px;
-   color: aliceblue;
-   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-   display:inline-block;
+
+/* TCM */
+.div-3>.TCM {
+   /* Hintergrund + Grid Orientierung + Transition + Abrundung */
+   background-color: orange;
+   grid-area: 2 / 4 / 2 / 4;
+   transition: grid-area ease-out 1s;
+   border-radius: 10px;
+   text-decoration: none;
 }
 
-.div-4>.div-9:hover {
+#TCM-content{
+   /* Kein Inhalt anzeigen */
+   display: none;
+
+}
+
+.div-3>.TCM:hover {
+   /* Grid Orientierung bei Hover*/
    grid-area: 2 / 4 / 4 / 5;
 }
 
-.div-9:hover #TCM-content{
+
+
+.TCM:hover #TCM-content{
+   /* Inhalt anzeigen bei Hover + Anpassung von Inhalt */
    display: block;
    color: black;
    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
@@ -178,7 +205,8 @@ a{
    font-size: 110%;
 }
 
-.div-4>div>a>img {
+/* Bildorientierung */
+.div-3>div>a>img {
    display: block;
    margin-right: auto;
    margin-left: auto;

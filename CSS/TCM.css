@@ -1,5 +1,7 @@
 :root {
+    /* standart Abrundung Variable*/
     --border-radius-main: 10px;
+    /* Standart Padding Variable */
     --padding-main: 15px;
 }
 
@@ -9,26 +11,28 @@
 }
 
 body {
+    /* Hintergrundbild + Wiederholungen + Größe + Fixierung + Schriftart */
     background-image: url(../img/TCM/background.jpeg);
     background-repeat: no-repeat;
     background-size: cover;
-    background-attachment: fixed;
-    /* background-image: linear-gradient(blue, green, orange); */
     background-attachment: fixed;
     font-family: Arial, Helvetica, sans-serif;
 }
 
 .parent {
-    /* background-color: green; */
+    /* Grid Aufbau */
+
     width: 98.8vw;
     height: 100vh;
     display: grid;
-    grid-template-columns: 10vw 88vw;
+    grid-template-columns: 15vw 83vw;
     grid-template-rows: 7vh auto;
 
 }
 
 .div-1 {
+    /* Grid orientierung + Farbverlauf + Zentrierung + Schriftgröße + Schriftart*/
+
     grid-area: 1/1/2/4;
     background-image: linear-gradient(Orange, Yellow);
     text-align: center;
@@ -36,13 +40,25 @@ body {
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 
-/* 
-.div-2 {
-    background-color: blue;
 
-} */
+.div-2 {
+    /* Hintergrundfarbe + Schriftfarbe + Variablen eingefügt */
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: var(--padding-main);
+    border-radius: var(--border-radius-main);
+
+}
+
+.div-2>a{
+    /* Links bearbeitet */
+    text-decoration: none;
+    color: aliceblue;
+}
 
 .div-3 {
+/* Grid Orientierung + untergrid erstellt */
+
     grid-area: 2/2/2/3;
     display: grid;
     height: 100%;
@@ -56,7 +72,7 @@ body {
 }
 
 .div-3>div {
-    /* background-color: white; */
+    /* Variablen + Farben */
     border-radius: var(--border-radius-main);
     padding: var(--padding-main);
     background-color: rgba(255, 255, 255, 0.7);
@@ -68,13 +84,3 @@ body {
 
 
 
-/* .div-4 {
-    border: 1px solid red;
-    display: grid;
-    grid-template-columns: auto;
-    grid-template-rows: repeat(6, auto);
-} */
-
-.div-4-1 {
-    height: 25vh;
-}
