@@ -9,11 +9,11 @@
 }
 
 body {
-    /* background-image: url(../img/TCM/background.jpeg); */
+    background-image: url(../img/TCM/background.jpeg);
     background-repeat: no-repeat;
-    background-size: contain;
-    position: sticky;
-    background-image: linear-gradient(blue, green, orange);
+    background-size: cover;
+    background-attachment: fixed;
+    /* background-image: linear-gradient(blue, green, orange); */
     background-attachment: fixed;
     font-family: Arial, Helvetica, sans-serif;
 }
@@ -29,9 +29,11 @@ body {
 }
 
 .div-1 {
-    /* background-color: red; */
     grid-area: 1/1/2/4;
-
+    background-image: linear-gradient(Orange, Yellow);
+    text-align: center;
+    font-size: 24px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 
 /* 
@@ -41,8 +43,6 @@ body {
 } */
 
 .div-3 {
-    /* background-color: aqua; */
-    border: 1px solid red;
     grid-area: 2/2/2/3;
     display: grid;
     height: 100%;
@@ -55,48 +55,17 @@ body {
 
 }
 
-.div-3>.div-3-1 {
+.div-3>div {
     /* background-color: white; */
     border-radius: var(--border-radius-main);
     padding: var(--padding-main);
-}
-
-.div-3-2 {
-    /* background-color: blue; */
-    border-radius: var(--border-radius-main);
-    padding: var(--padding-main);
-
-}
-
-.div-3-3 {
-    /* background-color: red; */
-    border-radius: var(--border-radius-main);
-    padding: var(--padding-main);
-
-}
-
-.div-3-4 {
-    /* background-color: green; */
-    padding: var(--padding-main);
-
-    border-radius: var(--border-radius-main);
-}
-
-.div-3-5 {
-    /* background-color: yellow; */
-    border-radius: var(--border-radius-main);
-    padding: var(--padding-main);
+    background-color: rgba(255, 255, 255, 0.7);
+    color: black;
 
 
 }
 
-.div-3-6 {
-    /* background-color: black; */
-    padding: var(--padding-main);
 
-    border-radius: var(--border-radius-main);
-
-}
 
 
 /* .div-4 {
@@ -106,6 +75,6 @@ body {
     grid-template-rows: repeat(6, auto);
 } */
 
-.div-4-1{
+.div-4-1 {
     height: 25vh;
 }
