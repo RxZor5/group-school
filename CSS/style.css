@@ -44,6 +44,12 @@ h1{
    background-image: linear-gradient(to top, purple, rgb(83, 0, 199));
 }
 
+.div-2>a{
+   /* Links bearbeitet */
+   text-decoration: none;
+   color: aliceblue;
+}
+
 /* Div 3 Bearbeitung */
 
 
