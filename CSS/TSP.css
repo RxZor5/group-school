@@ -1,0 +1,123 @@
+h1 {
+   color: #ebc800;
+   text-align: left;
+   font-size: 50px;
+}
+
+/* Menü/Navbar: */
+ul {
+   list-style-type: none;
+   background-color: #EBC800;
+   font-size:auto;
+   display: grid;
+   grid-template-columns: repeat(20, auto);
+}
+
+li {
+   float: left;
+}
+
+li a {
+   display: block;
+   padding: 3%;
+   color: black;
+}
+
+a:hover {
+   color: rgb(107, 0, 0);
+}
+
+/* Ende Menü/Navbar */
+
+
+/* textfarbe + hintergrund: */
+body {
+   background-color: #080807;
+   color: white;
+   background-image: url("../img/TSP/officebackground.png");
+   background-size: cover;
+   background-repeat: no-repeat;
+   background-attachment: fixed;
+}
+
+/* grid (texte): */
+.parent {
+   display: grid;
+   grid-template-columns: repeat(3, 13vw) 7vw repeat(2, 13vw);
+   grid-template-rows: repeat(10, 9vh);
+   column-gap: 5%;
+   row-gap: 5%;
+   margin-bottom: 15vh
+}
+
+.parent>div {
+   border: 1px solid #ebc800;
+}
+/*ende grid*/
+
+/* texte: */
+.text1 {
+   background-color: #080807;
+   font-size: auto;
+   padding: 2%;
+   grid-area: 1/1/3/3;
+}
+
+.text2 {
+   background-color: #080807;
+   font-size: auto;
+   padding: 2%;
+   grid-area: 3/5/5/7;
+}
+
+.text3 {
+   background-color: #080807;
+   font-size: auto;
+   padding: 2%;
+   grid-area: 5/1/7/3;
+}
+
+.text4 {
+   background-color: #080807;
+   font-size: auto;
+   padding: 2%;
+   grid-area: 7/5/9/7;
+}
+/* ende texte */
+
+
+/* bilder: */
+.images {
+   display: grid;
+   grid-template-columns: repeat(3, auto);
+   grid-template-rows: repeat(4, auto);
+}
+
+.img-1 {
+   grid-area: 1/1/1/1;
+}
+
+.img-2 {
+   grid-area: 1/3/1/3;
+}
+
+.img-3 {
+   grid-area: 2/2/2/2;
+}
+
+.img-4 {
+   grid-area: 3/1/3/1;
+}
+
+.img-5 {
+   grid-area: 3/3/3/3;
+}
+/*ende bilder*/
+
+
+/* trailer-position: */
+#trailer {
+   grid-area: 4/2/4/2;
+   width: 100%;
+   height: 200%;
+}
